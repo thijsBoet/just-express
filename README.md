@@ -5,7 +5,8 @@
 1. HTTP -> TCP/UDP
 2. NodeJS Webserver
 3. Internet a network of nodes sending packets
-
+## Networks
+---
 ### Packets
 * Five layers to every packet
 1. Physical     =>  Cables
@@ -27,3 +28,17 @@ WS: 49742 =>  SEGMENT               =>  NETWORK
                                               2. Retransmission
                                               3. In-order packets
                                               4. Congestion Control 
+
+### HTTP | part of the application/transportation layer
+1. Efficient
+  - Only connected when required
+2. Stateless
+  - No dialog | Everything forgotten after closing connection
+
+HTTP
+---
+Start line    -     REQUEST => Method: GET | Protocol: HTTP/1.1
+                    RESPONSE => Protocol: HTTP/1.1 | StatusCode 201
+Header        -     Content-type: text/html
+
+Body          -     Content
