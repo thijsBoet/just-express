@@ -1,0 +1,19 @@
+{
+  "name": "express101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nodeServer.js",
+  "scripts": {
+    "start": "nodemon nodeServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thijsBoet/just-express.git"
+  },
+  "author": "matthijs boet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thijsBoet/just-express/issues"
+  },
+  "homepage": "https://github.com/thijsBoet/just-express#readme"
+}
