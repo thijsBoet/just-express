@@ -26,6 +26,8 @@ app.post(`/process_login`, (req, res, next) => {
     if (password === `x`) {
         res.cookie(`username`, username);
         res.redirect(`/welcome`)
+    } else {
+        res.redirect(`/login?msg=fail`)
     }
 })
 
