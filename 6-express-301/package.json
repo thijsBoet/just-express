@@ -1,0 +1,18 @@
+{
+  "name": "6-express-301",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loginSite.js",
+  "scripts": {
+    "start": "nodemon loginSite.js"
+  },
+  "keywords": [],
+  "author": "Matthijs Boet",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "nodemon": "^2.0.12"
+  }
+}
