@@ -4,7 +4,7 @@
   "description": "",
   "main": "appUse.js",
   "scripts": {
-    "start": "nodemon rendering.js"
+    "start": "nodemon pugPractice.js"
   },
   "keywords": [],
   "author": "",
