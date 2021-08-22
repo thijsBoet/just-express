@@ -26,6 +26,10 @@ app.use((req, res, next) => {
     next();
 })
 
+app.get("/", (req, res, next) => {
+    res.send(`Sanity Check!`)
+})
+
 app.get("/login", (req, res, next) => {
     res.render(`login`)
 })
@@ -48,16 +52,28 @@ app.get("/welcome", (req, res, next) => {
     })
 })
 
+app.param("storyId", (req, res, next, id) => {
+    console.log(id);
+    next();
+})
+
+app.get("/story/:storyId", (req, res, next) => {
+    res.send(`<h1>Story ${req.params.storyId}</h1>`)
+})
+
+app.get('/statement', (req, res, next) => {
+    res.download(path.join(__dirname, 'userStatements/BankStatementChequing.png'), "Your-personal-bank-statement.png", (error) => {
+        if (error) {
+            if (!res.headersSent) {
+                res.redirect("/download/error")
+            }
+        }
+    })
+})
+
 app.get("/logout", (req, res, next) => {
     res.clearCookie(`username`)
     res.redirect("/login")
-})
-
-app.get('/', (req, res, next) => {
-    // The data in 2nd arg (render) is appended to res.locals
-    res.render("index", {
-
-    })
 })
 
 app.listen(3000, () => console.log(`Listening on port 3000`))
